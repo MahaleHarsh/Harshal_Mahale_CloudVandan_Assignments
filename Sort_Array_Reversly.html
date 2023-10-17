@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Sorting</title>
+</head>
+<body>
+  
+
+    <script>
+function sortArrayDescending(arr) {
+  return arr.sort(function(a, b) {
+    return b - a;
+  });
+}
+
+function getInputFromUser() {
+  const input = prompt("Enter numbers separated by spaces:");
+  const inputArray = input.split(" ").map(Number);
+  return inputArray;
+}
+
+function main() {
+  const inputArray = getInputFromUser();
+
+  if (inputArray.length === 0) {
+    console.log("No valid input provided.");
+    return;
+  }
+
+  const sortedArray = sortArrayDescending(inputArray);
+  document.write("Sorted Array in Descending Order:", sortedArray);
+}
+
+main();
+
+    </script>
+</body>
+</html>

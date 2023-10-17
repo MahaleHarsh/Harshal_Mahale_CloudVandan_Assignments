@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reverse String</title>
+</head>
+<body>
+    <h2>Reverse a String</h2>
+    <label for="inputString">Enter a string: </label>
+    <input type="text" id="inputString">
+    <button onclick="reverseAndDisplay()">Reverse</button>
+    <p style="color:white; background-color: black; margin-right: 1100px; height: 23px;">Reversed String: <span id="reversedString"></span></p>
+
+    <script>
+        function reverse(str) {
+            let reversedStr = '';
+            for (let i = str.length - 1; i >= 0; i--) {
+                reversedStr += str[i];
+            }
+            return reversedStr;
+        }
+
+        function reverseAndDisplay() {
+            const inputString = document.getElementById("inputString").value;
+            const reversedString = reverse(inputString);
+            document.getElementById("reversedString").textContent = reversedString;
+        }
+    </script>
+</body>
+</html>
